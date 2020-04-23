@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "836905614583",
+    "firebase_url": "https://e-med-78d51.firebaseio.com",
+    "project_id": "e-med-78d51",
+    "storage_bucket": "e-med-78d51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836905614583:android:70275a8d79be8c2fa4e7f2",
+        "android_client_info": {
+          "package_name": "com.datapiratepwl.e_med"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "836905614583-47s4l0uolqfltsv4ass0ftsaaeenot7g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACxuSBz7Lmt1lKCNXU_gfofxgp8l6gU3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "836905614583-47s4l0uolqfltsv4ass0ftsaaeenot7g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
