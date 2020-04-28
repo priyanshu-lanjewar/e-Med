@@ -51,7 +51,6 @@ open class LoginActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallba
         mGoogleApiClient.connect()
         login.setOnClickListener(object : View.OnClickListener{
             override fun onClick(v: View?) {
-                Toast.makeText(this@LoginActivity,"hit",Toast.LENGTH_SHORT).show()
                 SafetyNet.getClient(this@LoginActivity).verifyWithRecaptcha(key)
                     .addOnSuccessListener(this@LoginActivity, OnSuccessListener { response ->
                         Toast.makeText(this@LoginActivity,"Begin",Toast.LENGTH_SHORT).show()
@@ -79,6 +78,7 @@ open class LoginActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallba
                 progDil = ProgressDialog.show(this@LoginActivity,"e - Med","Loading..",true)
                 var intent:Intent = Intent(this@LoginActivity,RegisterOptActivity::class.java)
                 startActivity(intent)
+                progDil.dismiss()
                 finish()
             }
 

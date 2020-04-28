@@ -26,6 +26,13 @@ class RegisterOptActivity : AppCompatActivity() {
             dialogProgress = ProgressDialog.show(this@RegisterOptActivity,"e - Med","Loading..",true)
             startActivity(Intent(this@RegisterOptActivity,RegisterHospitalActivity::class.java))
             finish()
+            dialogProgress.dismiss()
+        }
+        register_doctor.setOnClickListener{
+            dialogProgress = ProgressDialog.show(this@RegisterOptActivity,"e - Med","Loading..",true)
+            startActivity(Intent(this@RegisterOptActivity,RegisterDoctorActivity::class.java))
+            finish()
+            dialogProgress.dismiss()
         }
     }
 

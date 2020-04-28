@@ -49,46 +49,7 @@
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            app:cardElevation="6dp"
-            app:cardCornerRadius="6dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            >
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
 
-                <TextView
-                    android:layout_marginLeft="5dp"
-                    android:id="@+id/tvEm"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="E-Mail Address"/>
-                <EditText
-                    android:singleLine="true"
-                    android:inputType="textEmailAddress"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_below="@+id/tvEm"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/hospital_email"
-                    android:hint="E-mail Address"/>
-                <Button
-                    android:layout_below="@+id/hospital_email"
-                    android:id="@+id/verify_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Verify"/>
-
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -120,6 +81,8 @@
                     android:visibility="invisible"/>
 
                 <EditText
+                    android:inputType="number"
+                    android:maxLength="6"
                     android:singleLine="true"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
@@ -129,13 +92,7 @@
                     android:id="@+id/hospital_mobile_otp"
                     android:visibility="invisible"
                     android:hint="OTP"/>
-                    <ProgressBar
-                        android:id="@+id/pro"
-                        android:layout_centerHorizontal="true"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:visibility="invisible"
-                        />
+
                <EditText
                     android:inputType="number"
                     android:maxLength="13"
@@ -146,9 +103,12 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/hospital_mobile"
                     android:text="+91"
+                   android:nextFocusDown="@id/verify_mobile"
+                   android:imeOptions=""
                     android:textIsSelectable="false"
                     android:hint="Contact Number"/>
                 <Button
+
                     android:layout_below="@+id/hospital_mobile_otp"
                     android:id="@+id/verify_mobile"
                     android:layout_width="match_parent"
@@ -187,6 +147,7 @@
                     android:layout_height="wrap_content"
                     android:text="Hospital Name : "/>
                 <EditText
+                    android:enabled="false"
                     android:singleLine="true"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
@@ -218,8 +179,10 @@
                     android:id="@+id/tvAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Hospital Name : "/>
+                    android:text="Hospital Address : "/>
                 <EditText
+                    android:enabled="false"
+                    android:singleLine="true"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_below="@+id/tvAdd"
@@ -228,6 +191,7 @@
                     android:id="@+id/hospital_address"
                     android:hint="Hospital Address"/>
                 <EditText
+                    android:enabled="false"
                     android:id="@+id/hosp_add_pin"
                     android:layout_below="@+id/hospital_address"
                     android:layout_width="match_parent"
@@ -237,6 +201,8 @@
                     android:hint="Pincode"
                     />
                 <EditText
+                    android:enabled="false"
+                    android:singleLine="true"
                     android:id="@+id/hosp_add_city"
                     android:layout_below="@+id/hosp_add_pin"
                     android:layout_width="match_parent"
@@ -244,6 +210,8 @@
                     android:hint="City"
                     />
                 <EditText
+                    android:enabled="false"
+                    android:singleLine="true"
                     android:id="@+id/hosp_add_District"
                     android:layout_below="@+id/hosp_add_city"
                     android:layout_width="match_parent"
@@ -251,6 +219,8 @@
                     android:hint="District"
                     />
                 <EditText
+                    android:enabled="false"
+                    android:singleLine="true"
                     android:id="@+id/hosp_add_State"
                     android:layout_below="@+id/hosp_add_District"
                     android:layout_width="match_parent"
@@ -260,6 +230,43 @@
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="6dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/tvEm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="E-Mail Address"/>
+                <EditText
+                    android:enabled="false"
+                    android:singleLine="true"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_below="@+id/tvEm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hospital_email"
+                    android:hint="E-mail Address"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -282,6 +289,7 @@
                     android:layout_height="wrap_content"
                     android:text="Password : "/>
                 <EditText
+                    android:enabled="false"
                     android:inputType="textPassword"
                     android:singleLine="true"
                     android:layout_marginLeft="5dp"
@@ -299,6 +307,7 @@
                     android:layout_height="wrap_content"
                     android:text="Re-enter Password : "/>
                 <EditText
+                    android:enabled="false"
                     android:inputType="textPassword"
                     android:singleLine="true"
                     android:layout_marginLeft="5dp"
@@ -335,6 +344,7 @@
                 android:alignmentMode="alignMargins"
                 >
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/reset_hosp"
                    app:cardBackgroundColor="#E8A39E"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
