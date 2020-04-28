@@ -38,6 +38,7 @@ class RegisterDoctorActivity : AppCompatActivity() {
                     if(dataSnapshot.toString() == "huic")
                     {
                         continue
+                       
                     }
                     list.add(dataSnapshot.child("hiuc").value.toString())
                 }
@@ -50,6 +51,7 @@ class RegisterDoctorActivity : AppCompatActivity() {
         var huic = findViewById<AutoCompleteTextView>(R.id.huic)
         var ArrayAdpt:ArrayAdapter<String> = ArrayAdapter(this,android.R.layout.simple_list_item_1,list)
         huic.setAdapter(ArrayAdpt)
+        //incomplete
 
 
     }
